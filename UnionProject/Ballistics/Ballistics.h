@@ -16,4 +16,5 @@ public:
   zVEC3 GetCurrentProjectile() const;
 
   static float GetHeightCorrectionAt( const float& position );
+  static float GetHeightCorrectionAtEX( const float& position, float a );
 };
