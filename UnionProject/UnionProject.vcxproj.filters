@@ -127,6 +127,12 @@
     <Filter Include="Union SDK\vdfs">
       <UniqueIdentifier>{4c476c43-4070-4840-92b2-887a0db02b49}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source code\zSmartAim">
+      <UniqueIdentifier>{6f3f6c2d-4ca1-4b65-911e-19826afddf3f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source code\zSmartAim\Ballistics">
+      <UniqueIdentifier>{79821878-f43e-417f-8280-82b4b2545714}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GothicAPI\Gothic_I_Classic\G1_Names.hpp">
@@ -2697,6 +2703,12 @@
     <ClInclude Include="resource.h">
       <Filter>Source code</Filter>
     </ClInclude>
+    <ClInclude Include="Ballistics\Ballistics.h">
+      <Filter>Source code\zSmartAim\Ballistics</Filter>
+    </ClInclude>
+    <ClInclude Include="zSmartAimAfx.h">
+      <Filter>Source code\zSmartAim</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GothicAPI\Gothic_I_Classic\G1_ClassDef.cpp">
@@ -2743,6 +2755,9 @@
     </ClCompile>
     <ClCompile Include="Plugin\plugin.cpp">
       <Filter>Source code\plugin</Filter>
+    </ClCompile>
+    <ClCompile Include="Ballistics\Ballistics.cpp">
+      <Filter>Source code\zSmartAim\Ballistics</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

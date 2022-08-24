@@ -386,6 +386,7 @@
     </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Ballistics\Ballistics.h" />
     <ClInclude Include="GothicAPI\Gothic_II_Addon\API\oAiHuman.h" />
     <ClInclude Include="GothicAPI\Gothic_II_Addon\API\oAiShoot.h" />
     <ClInclude Include="GothicAPI\Gothic_II_Addon\API\oAniCtrl.h" />
@@ -1242,8 +1243,10 @@
     <ClInclude Include="UnionSDK\utils\Macro.h" />
     <ClInclude Include="UnionSDK\utils\Types.h" />
     <ClInclude Include="UnionSDK\vdfs\Vdfs.h" />
+    <ClInclude Include="zSmartAimAfx.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Ballistics\Ballistics.cpp" />
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="GothicAPI\Gothic_II_Addon\G2A_ClassDef.cpp" />
     <ClCompile Include="GothicAPI\Gothic_II_Addon\G2A_GlobalVariables.cpp" />

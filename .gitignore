@@ -350,3 +350,5 @@ MigrationBackup/
 .ionide/
 /UnionProject/G1 Release
 /G1 Release
+/UnionProject/G1 Debug/UnionProject.tlog
+/UnionProject/G1 Debug
