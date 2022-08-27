@@ -28,13 +28,12 @@ zVEC3 Divide( const zVEC3& v1, const zVEC3& v2 ) {
   );
 }
 
-float a_param = 0.01f;
 
 cexport void Game_Loop() {
   static zVEC3 _up( 0.0f, 400.0f, 0.0f );
   static float _scale = 20.0f;
 
-  zVEC3 enemyPosition = zVEC3( 0.8f, 0.0f, 0.0f );
+  zVEC3 enemyPosition = zVEC3( 30.0f, 0.0f, 0.0f );
   float enemyCorrectionY = zParabolicTrajectory::GetHeightCorrectionAt( enemyPosition.Length() );
   zVEC3 enemyPositionCorrected = enemyPosition - zVEC3( 0.0f, enemyCorrectionY, 0.0f );
 
@@ -47,19 +46,16 @@ cexport void Game_Loop() {
    
   float add_speed = 0.0001f * frametime;
 
-  a_param -= add_speed;
-  if (a_param <= 0.001)
-      a_param = 0.5f;
 
-  for( float x = 0; x < 20.0f; x += 0.1f ) {
+  for( float x = 0; x < 50.0f; x += 0.1f ) {
     zVEC3 v1 = direction * x;
     zVEC3 v2 = direction * (x + 0.1f);
 
     zVEC3 c1 = v1;
     zVEC3 c2 = v2;
 
-    v1[VY] += zParabolicTrajectory::GetHeightCorrectionAtEX( x , a_param);
-    v2[VY] += zParabolicTrajectory::GetHeightCorrectionAtEX( x + 0.1f, a_param );
+    v1[VY] += zParabolicTrajectory::GetHeightCorrectionAt( x );
+    v2[VY] += zParabolicTrajectory::GetHeightCorrectionAt( x + 0.1f );
 
     zlineCache->Line3D( v1 * _scale + _up, v2 * _scale + _up, GFX_RED, 0 );
   }

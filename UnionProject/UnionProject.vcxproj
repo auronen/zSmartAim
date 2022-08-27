@@ -48,6 +48,7 @@
     <ProjectGuid>{e4b6c9a0-2a25-4275-9b94-cf1a86aaac0e}</ProjectGuid>
     <RootNamespace>UnionProject</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>zSmartAim</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

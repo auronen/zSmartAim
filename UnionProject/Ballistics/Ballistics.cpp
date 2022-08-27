@@ -1,5 +1,5 @@
 #include "../zSmartAimAfx.h"
-
+const float g = 9.31f;
 
 zParabolicTrajectory::zParabolicTrajectory( const zVEC3& start, const zVEC3& end, const float& speed ) {
   Start = start;
@@ -13,17 +13,13 @@ zParabolicTrajectory::zParabolicTrajectory( const zVEC3& start, const zVEC3& end
 
 
 float zParabolicTrajectory::GetHeightCorrectionAt( const float& position) {
-  if( position <= 1.0f )
+  if( position <= 0.0f )
     return 0.0;
 
-  return powf( position - 1.0f, 2.0f ) * -0.125f;
-}
-
-float zParabolicTrajectory::GetHeightCorrectionAtEX(const float& position, float a) {
-    if (position <= 1.0f)
-        return 0.0;
-
-    return a * powf(position - 1.0f, 2.0f) * -0.125f;
+  //return powf( position - 1.0f, 2.0f ) * -0.125f;
+  float speed = 30.0f ;
+  float angle = 0.28f;
+  return (tanf(angle) * position) - ((g * position * position) / (2*speed*speed *cosf(angle)*cosf(angle )));
 }
 
 zVEC3 zParabolicTrajectory::GetProjectileAt( const float& position ) const {
